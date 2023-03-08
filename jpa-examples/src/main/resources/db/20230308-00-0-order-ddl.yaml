@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230308-00-0
+      author: ytikhov
+      changes:
+        - createTable:
+            tableName: t_order
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: text
+                  type: VARCHAR(50)

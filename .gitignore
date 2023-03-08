@@ -1,3 +1,5 @@
 /.gradle/
 /.idea/
 /build/
+/dynamic-json/build/
+/jpa-examples/build/

@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230308-01-0
+      author: ytikhov
+      changes:
+        - createTable:
+            tableName: t_extra
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: order_id
+                  type: UUID
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: extra_text
+                  type: VARCHAR(50)
+        - addForeignKeyConstraint:
+            baseColumnNames: order_id
+            baseTableName: t_extra
+            referencedTableName: t_order
+            referencedColumnNames: id
+            constraintName: fk_extra_order_id_order_id
+            onUpdate: RESTRICT
+            onDelete: CASCADE
+        - createIndex:
+            clustered: false
+            columns:
+              - column:
+                  name: order_id
+            indexName: idx_extra_order_id
+            tableName: t_extra

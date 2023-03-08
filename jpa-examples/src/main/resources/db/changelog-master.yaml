@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - include:
+      file: 20230308-00-0-order-ddl.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 20230308-01-0-extra-ddl.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 20230308-02-0-position-ddl.yaml
+      relativeToChangelogFile: true
