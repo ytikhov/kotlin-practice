@@ -1,0 +1,4 @@
+databaseChangeLog:
+  - include:
+      file: 20230311-00-0-t_shared-ddl.yaml
+      relativeToChangelogFile: true

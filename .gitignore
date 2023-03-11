@@ -2,4 +2,5 @@
 /.idea/
 /build/
 /dynamic-json/build/
-/jpa-examples/build/
+/jpa-locks/build/
+/jpa-cardinality/build/

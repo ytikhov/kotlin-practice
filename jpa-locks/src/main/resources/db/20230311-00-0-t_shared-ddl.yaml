@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 20230311-00-0
+      author: ytikhov
+      changes:
+        - createTable:
+            tableName: t_shared
+            columns:
+              - column:
+                  name: id
+                  type: BIGSERIAL
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: shared_value
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: version
+                  type: INTEGER
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_date
+                  type: DATETIME
+              - column:
+                  name: last_modified_date
+                  type: DATETIME
